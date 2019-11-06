@@ -1,0 +1,14 @@
+
+<button type="button" (click)="makeRequest()">Make request</button>
+<div *ngIf="loading">loading...</div>
+
+<!--Uso un ciclo for per scandire tutta la lista di articoli-->
+<div *ngFor="let art of productData">
+   <h3>{{art.nome}}</h3>
+   <div>
+      Fornitore: {{art.fornitore}}
+      Quantita': {{art.quantita}}
+      Costo Unitario: {{art.costoUnitario}}
+   </div>
+   <hr>
+</div>
